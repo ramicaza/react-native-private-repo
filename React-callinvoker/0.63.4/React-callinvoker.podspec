@@ -18,29 +18,17 @@ end
 
 folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32'
 folly_version = '2020.01.13.00'
+boost_compiler_flags = '-Wno-documentation'
 
 Pod::Spec.new do |s|
-  s.name                   = "React-RCTLinking"
+  s.name                   = "React-callinvoker"
   s.version                = version
-  s.summary                = "A general interface to interact with both incoming and outgoing app links."
+  s.summary                = "-"  # TODO
   s.homepage               = "https://reactnative.dev/"
-  s.documentation_url      = "https://reactnative.dev/docs/linking"
   s.license                = package["license"]
   s.author                 = "Facebook, Inc. and its affiliates"
   s.platforms              = { :ios => "10.0", :tvos => "10.0" }
-  s.compiler_flags         = folly_compiler_flags + ' -Wno-nullability-completeness'
   s.source                 = source
-  s.source_files           = "Libraries/LinkingIOS/*.{m,mm}"
-  s.preserve_paths         = "package.json", "LICENSE", "LICENSE-docs"
-  s.header_dir             = "RCTLinking"
-  s.pod_target_xcconfig    = {
-                               "USE_HEADERMAP" => "YES",
-                               "CLANG_CXX_LANGUAGE_STANDARD" => "c++14",
-                               "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/Folly\""
-                             }
-
-  s.dependency "FBReactNativeSpec", version
-  s.dependency "React-Core/RCTLinkingHeaders", version
-  s.dependency "ReactCommon/turbomodule/core", version
-  s.dependency "React-jsi", version
+  s.source_files           = "ReactCommon/callinvoker/**/*.{cpp,h}"
+  s.header_dir             = "ReactCommon"
 end
