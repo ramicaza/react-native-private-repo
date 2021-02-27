@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/react-native-community/react-native-svg.git', :tag => "v#{s.version}" }
   s.source_files     = 'ios/**/*.{h,m}'
   s.requires_arc     = true
-  s.dependency         'React-Core'
+  s.dependency         'React-Core' # NOTE: many libs (including this one) erroneously put React here instead
 end

@@ -16,5 +16,6 @@ Pod::Spec.new do |s|
   s.source_files  = "ios/**/*.{h,m}"
 
   s.dependency 'React-Core'
-  s.dependency 'Yoga'
+  s.dependency 'Yoga' # NOTE: this is modified from the original...
+  #  I'm guessing it was failing without this SOMETIMES because it was parallelizing the build and Yoga wasn't always built in time
 end

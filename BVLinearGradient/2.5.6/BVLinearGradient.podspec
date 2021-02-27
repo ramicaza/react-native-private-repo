@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.preserve_paths  = "**/*.js"
   s.frameworks = 'UIKit', 'QuartzCore', 'Foundation'
 
-  s.dependency 'React-Core'
+  s.dependency 'React-Core' # NOTE: many libs (including this one) erroneously put React here instead
 
 end
