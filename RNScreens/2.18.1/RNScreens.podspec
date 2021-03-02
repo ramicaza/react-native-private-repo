@@ -20,4 +20,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency "React-Core"
+  s.dependency "React-RCTImage" # NOTE: this is modified from the original...
 end
