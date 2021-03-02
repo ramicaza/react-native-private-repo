@@ -31,3 +31,6 @@ x    pod 'Yoga', :path => "#{prefix}/ReactCommon/yoga", :modular_headers => true
 x    pod 'DoubleConversion', :podspec => "#{prefix}/third-party-podspecs/DoubleConversion.podspec"
 x    pod 'glog', :podspec => "#{prefix}/third-party-podspecs/glog.podspec"
 x    pod 'Folly', :podspec => "#{prefix}/third-party-podspecs/Folly.podspec"
+
+
+# NOTE: RNCMaskedView and RNScreens are only needed for StackNavigator if we omit Stack, remove these deps!
