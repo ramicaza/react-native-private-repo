@@ -34,3 +34,4 @@ x    pod 'Folly', :podspec => "#{prefix}/third-party-podspecs/Folly.podspec"
 
 
 # NOTE: RNCMaskedView and RNScreens are only needed for StackNavigator if we omit Stack, remove these deps!
+# TODO: need to change other package.json to be pulled from SOURCE not node_modues/.../package.json
